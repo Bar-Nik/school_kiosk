@@ -1,0 +1,16 @@
+{% extends 'kiosk/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <h1>{{title}}</h1>
+
+    <div class="news">
+        {% for k, v in content.items %}
+            <h2>{{ k }}</h2>
+            <p>{{ v }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

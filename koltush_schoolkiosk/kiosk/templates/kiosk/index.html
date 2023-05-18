@@ -1,0 +1,69 @@
+{% extends 'kiosk/base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% block mainmenu %}
+
+
+<main>
+<nav class="menu">
+<ul>
+  <li>
+    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
+    <a href="#" class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/timetable.svg' %}" alt="" class="icon"></div>
+      <div>Расписание уроков</div>
+      <div class="arrow"><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+      <ul>
+        <li><a href="#">1-4 классы</a>
+        <li><a href="{% url 'raspisanie_post' %}">5-11 классы</a></li>
+        <li><a href="{% url 'raspisanie' %}">Изменения на СЕГОДНЯ</a></li>
+      </ul>
+  </li>
+  <li>
+    <a href="{% url 'raspisanie_calls' %}" class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/call.svg' %}" alt="" class="icon">
+      </div><div>Расписание звонков</div>
+      <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'news' %}" class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/news.svg' %}" alt="" class="icon"></div>
+      <div>Новости школы</div>
+      <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'about' %}"  class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/school.svg' %}" alt="" class="icon"></div>
+      <div>О школе</div>
+      <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+  </li>
+  <li>
+    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+    <a class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/navigation.svg' %}" alt="" class="icon"></div>
+      <div>Навигация по школе</div>
+      <div class="arrow"><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+      <ul>
+        <li><a href="{% url 'navigator1' %}">1 этаж</a></li>
+        <li><a href="{% url 'navigator2' %}">2 этаж</a></li>
+        <li><a href="{% url 'navigator3' %}">3 этаж</a></li>
+      </ul>
+  </li>
+</ul>
+</nav>
+</main>
+
+
+{% endblock %}
+{% endblock %}
+
+

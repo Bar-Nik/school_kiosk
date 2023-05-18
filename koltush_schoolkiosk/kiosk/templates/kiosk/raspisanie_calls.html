@@ -1,0 +1,14 @@
+{% extends 'kiosk/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <h1>{{title}}</h1>
+    <div class="calls">
+    {% autoescape off %}
+      {{ content }}
+    {% endautoescape %}
+    </div>
+
+{% endblock %}

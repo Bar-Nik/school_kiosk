@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'kiosk/css/styles.css' %}">
+
+</head>
+<body id="kiosk">
+
+<header id="header">
+    <br>
+    <a href="{% url 'home' %}"><h3 class="headline_3">МОУ "Колтушская средняя общеобразовательная школа имени академика И.П.Павлова"</h3></a>
+	<br><br><br><br><br>
+<div class="clock" >
+    <div class="hour">
+        <div class="hr" id="hr"></div>
+    </div>
+    <div class="min">
+        <div class="mn" id="mn"></div>
+    </div>
+    <div class="sec">
+        <div class="sc" id="sc"></div>
+    </div>
+</div>
+
+</header>
+
+{% block content %}
+
+{% endblock %}
+<br>
+<div id="home-button"></div>
+<div id="home-url" data-url="{% url 'home' %}"></div>
+<script type="text/javascript" src="{% static 'kiosk/js/button_Glavnay.js' %}"></script>
+<script type="text/javascript" src="{% static 'kiosk/js/clock.js' %}"></script>
+<br>
+</body>
+
+<footer id="footer"><br><h3 class="headline_3"><i>сайт школы: https://koltush.vsevobr.ru/</i></h3><br></footer>
+
+</html>
