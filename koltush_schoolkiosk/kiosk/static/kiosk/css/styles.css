@@ -1,7 +1,7 @@
 {% load static %}
 
 #kiosk {
-  background-image: url("../../../static/kiosk/images/img/fon.jpg");
+  background-image: url("../../../static/kiosk/images/img/fon1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
