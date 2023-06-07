@@ -1,17 +1,17 @@
 {% load static %}
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 #kiosk {
   background-image: url("../../../static/kiosk/images/img/fon.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Montserrat', Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 #header {
   margin: 0px;
-  height: 57vw;
+  height: 55vw;
   text-align: left;
 }
 #header a{
@@ -24,13 +24,13 @@
   /*margin: 0 10vw 100px;*/
   margin: 0 10vw 100px;
   padding: 0;
-  height: 80vw;
+  height: 90vw;
 
 }
 
 .icon {
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  height: 4vw;
 }
 
 .arrow {
@@ -68,9 +68,9 @@
   color: #20273a;/*#1f2d3b;*/
   
   margin-bottom: 5px;
-  padding: 1vw;
+  padding: 1.5vw;
   /*border: 1px solid #babbbd;*/
-  font-size: 4.5vw;
+  font-size: 5vw;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -108,12 +108,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
   color: #20273a;
   margin-bottom: 5px;
-  font-size: 3.5vw;
+  font-size: 4vw;
   margin: 6px;
   transition: all 1s ease;
   /*text-transform: uppercase;*/
   list-style: none;
-  padding-left: 0;
+  padding-left: 1vw;
 }
 
 .menu li > a:hover {
