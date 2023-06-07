@@ -1,11 +1,12 @@
 {% load static %}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 #kiosk {
   background-image: url("../../../static/kiosk/images/img/fon.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Verdana, Arial, Helvetica, sans-serif;
 }
 
 #header {

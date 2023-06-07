@@ -13,7 +13,7 @@
     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
     <a href="#" class="menu_0">
       <div><img src="{% static 'kiosk/images/icons/timetable.svg' %}" alt="" class="icon"></div>
-      <div>Расписание уроков</div>
+      <div>Расписание</div>
       <div class="arrow"><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
     </a>
     <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
@@ -24,16 +24,30 @@
       </ul>
   </li>
   <li>
+    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+    <a class="menu_0">
+      <div><img src="{% static 'kiosk/images/icons/navigation.svg' %}" alt="" class="icon"></div>
+      <div>Навигация</div>
+      <div class="arrow"><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
+    </a>
+    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+      <ul>
+        <li><a href="{% url 'navigator1' %}">1 этаж</a></li>
+        <li><a href="{% url 'navigator2' %}">2 этаж</a></li>
+        <li><a href="{% url 'navigator3' %}">3 этаж</a></li>
+      </ul>
+  </li>
+  <li>
     <a href="{% url 'raspisanie_calls' %}" class="menu_0">
       <div><img src="{% static 'kiosk/images/icons/call.svg' %}" alt="" class="icon">
-      </div><div>Расписание звонков</div>
+      </div><div>Звонки</div>
       <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
     </a>
   </li>
   <li>
     <a href="{% url 'news' %}" class="menu_0">
       <div><img src="{% static 'kiosk/images/icons/news.svg' %}" alt="" class="icon"></div>
-      <div>Новости школы</div>
+      <div>Новости</div>
       <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
     </a>
   </li>
@@ -44,20 +58,7 @@
       <div><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
     </a>
   </li>
-  <li>
-    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
-    <a class="menu_0">
-      <div><img src="{% static 'kiosk/images/icons/navigation.svg' %}" alt="" class="icon"></div>
-      <div>Навигация по школе</div>
-      <div class="arrow"><img src="{% static 'kiosk/images/icons/arrow.svg' %}" alt="" class="icon"></div>
-    </a>
-    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
-      <ul>
-        <li><a href="{% url 'navigator1' %}">1 этаж</a></li>
-        <li><a href="{% url 'navigator2' %}">2 этаж</a></li>
-        <li><a href="{% url 'navigator3' %}">3 этаж</a></li>
-      </ul>
-  </li>
+
 </ul>
 </nav>
 </main>
