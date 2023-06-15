@@ -67,3 +67,20 @@ class Raspisanie_Calls(models.Model):
         verbose_name = 'Расписание звонков'
         verbose_name_plural = 'Расписание звонков'
         ordering = ['id']
+
+class Raspisanie_Bus(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Заголовок')
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+    raspisanie_bus = models.FileField(upload_to='raspisanie_bus/%Y/%m/%d/',
+                                        verbose_name='Файл с расписанием автобуса')
+    time_create = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    time_update = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
+    is_published = models.BooleanField(default=True, verbose_name='Публикация')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Расписание автобуса'
+        verbose_name_plural = 'Расписание автобуса'
+        ordering = ['id']

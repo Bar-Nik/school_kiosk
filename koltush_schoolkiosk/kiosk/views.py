@@ -209,3 +209,16 @@ def navigation3(request):
                  360, 'библио-тека', 'музей', 'психолог']
     }
     return render(request, 'kiosk/floor_third.html', context=context)
+
+def raspisanie_bus(request):
+    raspisanie = Raspisanie_Bus.objects.all()
+    raspisanie_bus_temp = raspisanie[len(raspisanie) - 1].raspisanie_bus
+    bus = mth.convert_to_html(raspisanie_bus_temp).value
+    calls_bus_new = bus[bus.find('<table>'):]
+
+    context = {
+        'title': 'Расписание автобуса',
+        'content': calls_bus_new,
+        'date_time': datetime.now()
+    }
+    return render(request, 'kiosk/bus.html', context=context)

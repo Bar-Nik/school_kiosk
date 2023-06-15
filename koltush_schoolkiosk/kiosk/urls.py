@@ -16,5 +16,6 @@ urlpatterns = [
     path('about/', aboutSchool, name='about'),
     path('navi1/', navigation1, name='navigator1'),
     path('navi2/', navigation2, name='navigator2'),
-    path('navi3/', navigation3, name='navigator3')
+    path('navi3/', navigation3, name='navigator3'),
+    path('raspisanie_bus/', raspisanie_bus, name='raspisanie_bus'),
 ]

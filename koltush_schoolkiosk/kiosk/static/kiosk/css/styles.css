@@ -16,7 +16,7 @@
 }
 #header a{
   text-decoration: none;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
 }
 
 
@@ -206,6 +206,8 @@ h1 {
   border-radius: 1.5vw;
 }
 
+
+
 .rasp table {
   font-size: 1.1vw;
   color: #20273a;
@@ -234,6 +236,34 @@ h1 {
   border-radius: 1vw;
 }
 
+.bus table {
+  font-size: 2vw;
+  color: #20273a;
+  width: 75vw; /* Ширина таблицы */
+  /*border: 1px solid green; /* Рамка вокруг таблицы */
+  margin: auto; /* Выравниваем таблицу по центру окна  */
+  font-style: italic;
+  font-weight: bold;
+  line-height: 3.2vw;
+}
+
+.bus td {
+  text-align: center; /* Выравниваем текст по центру ячейки */
+  height: 3vw;
+  width: 25vw;
+  /*border: 1px solid #3a6499;*/
+  margin: 0;
+  padding: 0;
+
+  background: rgb(235,241,246); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(235,241,246,1) 0%, rgba(171,211,238,1) 50%, rgba(137,195,235,1) 51%, rgba(213,235,251,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(137,195,235,1) 51%,rgba(213,235,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(137,195,235,1) 51%,rgba(213,235,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
+  cursor: default;
+  border-radius: 1vw;
+}
+
 .calls tr:nth-child(1) td {
   text-transform: uppercase;
 
@@ -245,6 +275,16 @@ h1 {
 }
 
 .rasp tr:nth-child(1) td {
+  text-transform: uppercase;
+
+  background: rgb(207,231,250); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(207,231,250,1) 0%, rgba(99,147,193,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 );
+}
+
+.bus tr:nth-child(1) td {
   text-transform: uppercase;
 
   background: rgb(207,231,250); /* Old browsers */
@@ -358,7 +398,7 @@ h1 {
 
 .start {
   fill: white;
-  animation: animate_start 2s infinite;
+  animation: animate_start 0.5s infinite;
 }
 
 
@@ -368,7 +408,7 @@ h1 {
   stroke-width: 40;
   stroke-dashoffset: 25000;
   stroke-dasharray: 800;
-  animation: bt2 30s linear forwards infinite;
+  animation: bt2 60s linear forwards infinite;
 }
 
 
@@ -378,10 +418,10 @@ h1 {
 
 @keyframes animate_start {
     0% {
-        fill:red;
+        fill:gray;
     }
     50% {
-        fill:green;
+        fill:yellow;
     }
     100% {
         fill:red;
@@ -411,8 +451,8 @@ h1 {
 .clock:before{
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 1.5vw;
+    height: 1.5vw;
     background-color: #000000;
     border-radius: 50%;
     z-index: 999;
@@ -425,16 +465,16 @@ h1 {
 }
 
 .clock .hour, .hr{
-    width: 160px;
-    height: 160px;
+    width: 15vw;
+    height: 15vw;
 }
 .clock .min, .mn{
-    width: 190px;
-    height: 190px;
+    width: 22.5vw;
+    height: 22.5vw;
 }
 .clock .sec, .sc{
-    width: 230px;
-    height: 230px;
+    width: 24vw;
+    height: 24vw;
 }
 
 .hr, .mn, .sc{
@@ -449,8 +489,8 @@ h1 {
 .hr:before{
     content: '';
     position: absolute;
-    width: 8px;
-    height: 80px;
+    width: 0.8vw;
+    height: 7vw;
     background-color: #000000;
     z-index: 10;
     border-radius: 6px 6px 0 0;
@@ -458,8 +498,8 @@ h1 {
 .mn:before{
     content: '';
     position: absolute;
-    width: 4px;
-    height: 90px;
+    width: 0.4vw;
+    height: 11vw;
     background-color: #000000;
     z-index: 11;
     border-radius: 6px 6px 0 0;
@@ -467,8 +507,8 @@ h1 {
 .sc:before{
     content: '';
     position: absolute;
-    width: 2px;
-    height: 150px;
+    width: 0.1vw;
+    height: 14vw;
     background-color: #000000;
     z-index: 12;
     border-radius: 6px 6px 0 0;
