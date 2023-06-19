@@ -349,7 +349,7 @@ h1 {
 .block_2 {
   display: flex;
   margin: 0;
-  padding: 4vw;
+  padding: 4.9vw;
   /*flex-direction: column;*/
   flex-wrap: wrap;
   justify-content: space-between;
@@ -365,9 +365,9 @@ h1 {
 
   margin: 0;
   padding: 0.2vw;
-  width: 12vw;
+  width: 11vw;
   height: 5vw;
-  font-size: 2vw;
+  font-size: 1.8vw;
 
   overflow: inherit;
 

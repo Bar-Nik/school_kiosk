@@ -1,0 +1,14 @@
+{% extends 'kiosk/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <h1>{{title}}</h1>
+    <div class="bus">
+    {% autoescape off %}
+      <h3 class="headline_3">{{ content }}</h3>
+    {% endautoescape %}
+    </div>
+
+{% endblock %}
