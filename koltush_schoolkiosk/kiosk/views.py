@@ -12,12 +12,6 @@ from kiosk.models import *
 import requests
 from bs4 import BeautifulSoup
 
-# menu = [
-#     {'title': 'Расписание уроков 5-11', 'url_name': '#'},
-#     {'title': 'Расписание звонков', 'url_name': 'raspisanie_calls/'},
-#     {'title': 'Новости школы', 'url_name': 'novosti/'},
-#     {'title': 'О школе', 'url_name': 'about/'}, {'title': 'Навигация', 'url_name': 'navi/'}
-# ]
 days_week_list = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
 
 date_time = datetime.now()
@@ -46,7 +40,11 @@ def raspisanie_new(request):
 
 
 def raspisanie_post(request):
-    return render(request, 'kiosk/raspisanie_post.html', {'title': 'Расписание 5-11 классы'})
+    context = {
+        'title': 'Расписание 5-11 классы',
+        'date_time': date_today
+    }
+    return render(request, 'kiosk/raspisanie_post.html', context=context)
 
 
 def raspisanie_post_monday(request):
@@ -113,6 +111,19 @@ def raspisanie_post_friday(request):
 
     context = {
         'title': 'Пятница',
+        'content': post_rasp,
+        'date_time': date_today
+    }
+    return render(request, 'kiosk/raspisanie.html', context=context)
+
+def raspisanie_post_saturday(request):
+    raspisanie = Raspisanie_Post.objects.all()
+    raspisanie_post = raspisanie[len(raspisanie) - 1].raspisanie_post_6saturday
+    post = mth.convert_to_html(raspisanie_post).value
+    post_rasp = post[post.find('<table>'):]
+
+    context = {
+        'title': 'Суббота',
         'content': post_rasp,
         'date_time': date_today
     }

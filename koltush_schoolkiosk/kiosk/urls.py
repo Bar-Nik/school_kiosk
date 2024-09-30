@@ -11,6 +11,7 @@ urlpatterns = [
     path('raspisanie_post/wednesday', raspisanie_post_wednesday, name='raspisanie_post_wednesday'),
     path('raspisanie_post/thursday', raspisanie_post_thursday, name='raspisanie_post_thursday'),
     path('raspisanie_post/friday', raspisanie_post_friday, name='raspisanie_post_friday'),
+    path('raspisanie_post/saturday', raspisanie_post_saturday, name='raspisanie_post_saturday'),
     path('raspisanie_calls/', raspisanie_calls, name='raspisanie_calls'),
     path('news/', newSchool, name='news'),
     path('about/', aboutSchool, name='about'),
